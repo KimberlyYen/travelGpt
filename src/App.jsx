@@ -1,8 +1,8 @@
 import { useState } from 'react'
-import './App.css'
 import { Link, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Book } from './pages/Book'
+import { BookList } from './pages/BookList'
 
 function App() {
 
@@ -22,7 +22,8 @@ function App() {
       
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/books" element={<Book />} />
+        <Route path="/books" element={<BookList />} />
+        <Route path="/books/:id" element={<Book />} />
       </Routes>
     </div>
   )
