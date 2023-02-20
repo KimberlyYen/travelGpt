@@ -2,25 +2,28 @@ import { NavLink, Link, Route, Routes } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { NotFound } from './pages/NotFound'
 import { BookRoutes } from './BookRoutes'
-import "./style.css"
+import './style.css'
 
 function App() {
   return (
     <>
-      <nav>  
+      <nav>
         <ul>
           <li>
-            <NavLink to="/">Home</NavLink>
+            <NavLink to="/">Fork IT</NavLink>
           </li>
           <li>
-            <NavLink end to="/books"> Books </NavLink>
+            <NavLink end to="/books">
+              {' '}
+              Books{' '}
+            </NavLink>
           </li>
         </ul>
-      </nav> 
+      </nav>
       <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/books/*" element={<BookRoutes />}/>
-          <Route path="*" element={<NotFound />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/books/*" element={<BookRoutes />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </>
   )
